@@ -29,7 +29,7 @@ mirrorid: {config.get('mirrorid', project)}
 excerpt_separator: ""
 ---
 """ + """
-<!-- 本页面从 NYIST/mirrorz-help-ng 自动生成，如需修改请参阅该仓库 -->
+<!-- 本页面从 NYIST-CIPS/mirrorz-help-ng 自动生成，如需修改请参阅该仓库 -->
 {% raw %}""" + (str(doc_title) if not doc_title is None else "") + """{% endraw %}
 <div class="z-wrap">
     <form class="z-form z-global">
