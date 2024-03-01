@@ -20,7 +20,7 @@ if [ -z "$MIRRORZ_HELP_HOME" ]; then
     exit 1
 fi
 
-MIRRORZ_HELP_CONTENT_PATH="${MIRRORZ_HELP_HOME}/tuna"
+MIRRORZ_HELP_CONTENT_PATH="${MIRRORZ_HELP_HOME}/nyist"
 
 if [ -z "$MIRROR_WEB_HOME" ]; then
     echo "MIRROR_WEB_HOME not set"
@@ -163,15 +163,15 @@ declare -a IMPORT_LIST=(
 for md in "${IMPORT_LIST[@]}"; do
     md="${MIRROR_WEB_HOME}/help/_posts/${md}"
     # 'mirrorid: '.length == 10, then xargs to trim
-    tuna_name=$(grep mirrorid $md | cut -c 11- | xargs)
-    cname=$(jq ".\"${tuna_name}\"" $CNAME_JSON_PATH | tr -d '"')
+    nyist_name=$(grep mirrorid $md | cut -c 11- | xargs)
+    cname=$(jq ".\"${nyist_name}\"" $CNAME_JSON_PATH | tr -d '"')
     if [ "$cname" = "null" ]; then
-        cname=$tuna_name
+        cname=$nyist_name
     fi
     if [ -f "$MIRRORZ_HELP_CONTENT_PATH/$cname.md" ]; then
-        echo "$tuna_name"
+        echo "$nyist_name"
         cp "$MIRRORZ_HELP_CONTENT_PATH/$cname.md" $md
     else
-        echo "! $tuna_name: $cname.mdx"
+        echo "! $nyist_name: $cname.mdx"
     fi
 done
