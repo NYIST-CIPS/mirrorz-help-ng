@@ -7,7 +7,7 @@ layout: help
 mirrorid: {project}
 ---
 """ + """
-<!-- 本 markdown 从 tuna/mirrorz-help-ng 自动生成，如需修改，请修改其对应部分 -->
+<!-- 本 markdown 从 NYIST-CIPS/mirrorz-help-ng 自动生成，如需修改，请修改其对应部分 -->
 
 <style>.z-help tmpl { display: none }</style>
 
@@ -38,7 +38,7 @@ mirrorid: {project}
 <script src="/static/js/mustache.js?{{ site.data['hash'] }}"></script>
 <script src="/static/js/zdocs.js?{{ site.data['hash'] }}"></script>
 """
-    os.makedirs('tuna', exist_ok=True)
-    with open(f'tuna/{project}.md', 'w') as f:
+    os.makedirs('nyist', exist_ok=True)
+    with open(f'nyist/{project}.md', 'w') as f:
         f.write(md)
     return html
