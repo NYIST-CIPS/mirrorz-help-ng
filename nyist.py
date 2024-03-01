@@ -3,7 +3,7 @@ from pathlib import Path
 import bs4
 
 
-outdir = Path(os.environ.get('TUNA_TEMP_DIR', './tuna/'))
+outdir = Path(os.environ.get('NYIST_TEMP_DIR', './nyist/'))
 os.makedirs(outdir, exist_ok=True)
 
 
@@ -29,7 +29,7 @@ mirrorid: {config.get('mirrorid', project)}
 excerpt_separator: ""
 ---
 """ + """
-<!-- 本页面从 tuna/mirrorz-help-ng 自动生成，如需修改请参阅该仓库 -->
+<!-- 本页面从 NYIST/mirrorz-help-ng 自动生成，如需修改请参阅该仓库 -->
 {% raw %}""" + (str(doc_title) if not doc_title is None else "") + """{% endraw %}
 <div class="z-wrap">
     <form class="z-form z-global">
