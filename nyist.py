@@ -3,7 +3,7 @@ from pathlib import Path
 import bs4
 
 
-outdir = Path(os.environ.get('NYIST_TEMP_DIR', './nyist/'))
+outdir = Path(os.environ.get('TUNA_TEMP_DIR', './nyist/'))
 os.makedirs(outdir, exist_ok=True)
 
 
